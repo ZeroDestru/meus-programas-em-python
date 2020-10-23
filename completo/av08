@@ -1,0 +1,18 @@
+from random import randint
+
+lnus = []
+a = 0
+b =0
+
+for i in range (50):
+
+    lnus.append(randint(1,99))
+
+a = int(input("escolha a menor posição que deseja ver: ")
+
+
+
+
+for c in range (a,b):
+
+    print ({lnus[c]}, end=" ")

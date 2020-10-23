@@ -1,0 +1,110 @@
+from random import randint
+
+num2 = 0
+num3 = 0
+num4 = 0
+a = 0
+b = 0
+c = 0
+tent = 1
+tr = True
+
+while(tr):
+    num = int(input())
+    #num = randint(100,999)
+
+    cen = num//100
+    dez = num//10 - cen*10
+    uni = num%10
+
+    if(cen != dez) and (dez != uni) and (cen != uni):
+        tr = False
+
+if(cen > dez) and (cen > uni):
+    a = cen
+
+    if(dez > uni):
+        b = dez
+        c = uni
+        
+    else:
+        b = uni
+        c = dez
+        
+elif(dez > cen) and (dez > uni):
+    a = dez
+
+    if(cen > uni):
+        b = cen
+        c = uni
+
+    else:
+        b = uni
+        c = cen
+
+elif(uni > cen) and (dez < uni):
+    a = uni
+
+    if(cen > dez):
+        b = cen
+        c = dez
+
+    else:
+        b = dez
+        c = cen
+
+num2 = (a*100) + (b*10) + c
+
+if(cen < dez) and (cen < uni):
+    a = cen
+
+    if(dez < uni):
+        b = dez
+        c = uni
+        
+    else:
+        b = uni
+        c = dez
+        
+elif(dez < cen) and (dez < uni):
+    a = dez
+
+    if(cen < uni):
+        b = cen
+        c = uni
+
+    else:
+        b = uni
+        c = cen
+
+elif(uni < cen) and (dez > uni):
+    a = uni
+
+    if(cen < dez):
+        b = cen
+        c = dez
+
+    else:
+        b = dez
+        c = cen
+
+num3 = (a*100) + (b*10) + c
+
+num4 = num2-num3 
+
+print(f"o menor número, e maior número formado por {num}, são respectivamente {num2}, e {num3}")
+print(f"isso dá {num2} - {num3} = {num4}")
+
+while(num4 > 495) and (num4 < 495):
+
+    if(num4 > 495):
+        num4 = num2-num3
+
+    else:
+        num4 = num2+num3
+
+    print(num4)
+
+    tent += 1
+
+print(f"teve que ter {tent} tentativas para chegar a 495")
