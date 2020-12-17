@@ -1,0 +1,10 @@
+		@media screen and (max-width: 500px) {
+			#divMobile {
+				
+			}
+		}
+		@media screen and (min-width: 310px) {
+			#divMobile {
+				
+			}
+		}

@@ -1,0 +1,1 @@
+<li><a href="link da imagem" rel="prettyPhoto[gallery1]"><img src="outro link da imagem" width="300" height="300" alt="Fly kite, fly!" /></a></li>
